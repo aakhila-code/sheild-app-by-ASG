@@ -178,3 +178,12 @@ li {
     border-radius: 8px;
     font-size: 1em;
 }
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+
