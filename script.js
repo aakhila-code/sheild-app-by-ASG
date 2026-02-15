@@ -12,9 +12,13 @@ let audioChunks = [];
 let isRecording = false;
 let pinAttempts = 0;
 const correctPin = "1234"; // Change PIN here
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
 
-
-
+  document.getElementById(pageId).classList.add('active');
+}
 // ===============================
 // SCREEN NAVIGATION
 // ===============================
@@ -255,3 +259,4 @@ function saveToHistory(loc) {
 renderContacts();
 renderHistory();
 showScreen("pin-screen");
+
