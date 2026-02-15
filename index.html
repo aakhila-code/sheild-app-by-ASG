@@ -61,18 +61,17 @@
 
     <!-- 14 Map Screen -->
     <div id="map-screen" class="screen hidden">
-        <h2>Safe Route Map</h2>
-        <!-- 15 Map Container -->
-        <div id="map" style="height: 400px;"></div>
-        <button id="get-route">Get Current Location</button>
+       <h2>Safe Route Map</h2>
+<button onclick="getLocation()">Get Current Location</button>
+<p id="locationOutput"></p>
     </div>
 
     <!-- 16 Contacts Screen -->
     <div id="contacts-screen" class="screen hidden">
-        <h2>Emergency Contacts</h2>
-        <ul id="contacts-list"></ul>
-        <button id="add-contact">Add Contact</button>
-    </div>
+      <input type="text" id="contactName" placeholder="Contact Name">
+<input type="text" id="contactNumber" placeholder="Phone Number">
+<button onclick="addContact()">Add Contact</button><ul id="contactList"></ul>
+  </div>
 
     <!-- 17 History Screen -->
     <div id="history-screen" class="screen hidden">
@@ -108,4 +107,5 @@
 </section>
 </body>
 </html>
+
 
