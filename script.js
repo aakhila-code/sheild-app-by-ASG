@@ -250,13 +250,33 @@ function saveToHistory(loc) {
     localStorage.setItem("history", JSON.stringify(history));
     renderHistory();
 }
-
-
-
 // ===============================
 // INITIALIZE
 // ===============================
 renderContacts();
 renderHistory();
 showScreen("pin-screen");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+      document.getElementById("locationOutput").innerText =
+        "Latitude: " + position.coords.latitude +
+        " | Longitude: " + position.coords.longitude;
+    });
+  } else {
+    alert("Geolocation not supported.");
+  }
+}
+function addContact() {
+  const name = document.getElementById("contactName").value;
+  const number = document.getElementById("contactNumber").value;
+
+  if(name && number) {
+    const li = document.createElement("li");
+    li.textContent = name + " - " + number;
+    document.getElementById("contactList").appendChild(li);
+  }
+}
+
+
 
