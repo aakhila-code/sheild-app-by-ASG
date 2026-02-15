@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 1 -->
+    <meta charset="UTF-8">
+    <!-- 2 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 3 -->
+    <title>SHEield - Smart Women Safety App</title>
+
+    <!-- 4 -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- 5 -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- 6 Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- 7 Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <!-- 8 Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- 9 Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <!-- 10 -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <!-- 11 PIN Screen -->
+    <div id="pin-screen" class="screen">
+        <h1>Enter PIN</h1>
+        <input type="password" id="pin-input" maxlength="4" placeholder="****">
+        <button id="pin-submit">Submit</button>
+        <p id="pin-error"></p>
+    </div>
+
+    <!-- 12 Home Screen -->
+    <div id="home-screen" class="screen hidden">
+        <header>
+            <h1>SHEield</h1>
+        </header>
+
+        <main>
+            <button id="sos-button">SOS</button>
+            <p>Tap to Send Emergency Alert</p>
+        </main>
+
+        <!-- 13 Navigation -->
+        <nav>
+            <button class="nav-btn active" data-screen="home">Home</button>
+            <button class="nav-btn" data-screen="map">Map</button>
+            <button class="nav-btn" data-screen="contacts">Contacts</button>
+            <button class="nav-btn" data-screen="history">History</button>
+        </nav>
+    </div>
+
+    <!-- 14 Map Screen -->
+    <div id="map-screen" class="screen hidden">
+        <h2>Safe Route Map</h2>
+        <!-- 15 Map Container -->
+        <div id="map" style="height: 400px;"></div>
+        <button id="get-route">Get Current Location</button>
+    </div>
+
+    <!-- 16 Contacts Screen -->
+    <div id="contacts-screen" class="screen hidden">
+        <h2>Emergency Contacts</h2>
+        <ul id="contacts-list"></ul>
+        <button id="add-contact">Add Contact</button>
+    </div>
+
+    <!-- 17 History Screen -->
+    <div id="history-screen" class="screen hidden">
+        <h2>Emergency History</h2>
+        <ul id="history-list"></ul>
+    </div>
+
+    <!-- 18 Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

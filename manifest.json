@@ -1,0 +1,21 @@
+{
+  "name": "SHEield - Smart Women Safety App",
+  "short_name": "SHEield",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#F5F5F5",
+  "theme_color": "#4A148C",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "SHEildLogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "SHEildLogo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
